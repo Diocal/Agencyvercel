@@ -139,14 +139,14 @@
     submenuItems.forEach(item => {
       let timeout;
       item.addEventListener('mouseenter', () => {
-        const dropdown = item.querySelector('.group-hover\\:block');
+        const dropdown = item.querySelector('.group-hover\\:block') as HTMLElement;
         if (dropdown) {
           clearTimeout(timeout);
           dropdown.style.display = 'block';
         }
       });
       item.addEventListener('mouseleave', () => {
-        const dropdown = item.querySelector('.group-hover\\:block');
+        const dropdown = item.querySelector('.group-hover\\:block') as HTMLElement;
         if (dropdown) {
           timeout = window.setTimeout(() => {
             dropdown.style.display = 'none';
