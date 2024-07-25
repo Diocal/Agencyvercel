@@ -1,0 +1,249 @@
+---
+---
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
+</head>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
+  }
+  .contact-section {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: #fff;
+    padding: 2rem 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .contact-details img, .contact-form img {
+    width: 100px;
+    margin-top: 1rem;
+  }
+  .contact-details {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .contact-form {
+    background: #fff;
+    color: #000;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+  .contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  .contact-form button {
+    background: #e83e8c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .contact-form button:hover {
+    background: #dc3545;
+  }
+  .hidden {
+    display: none;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .mt-8 {
+    margin-top: 2rem;
+  }
+  @media (min-width: 768px) {
+    .md\:w-1\/2 {
+      width: 50%;
+    }
+    .md\:mb-0 {
+      margin-bottom: 0;
+    }
+    .md\:block {
+      display: block;
+    }
+  }
+</style>
+
+<section class="contact-section">
+  <div class="container mx-auto px-4 py-20 flex flex-col md:flex-row justify-between items-center">
+    <div class="contact-details md:w-1/2 mb-8 md:mb-0">
+      <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+
+      <p class="text-lg mb-2">Miami | USA</p>
+      <p class="text-lg mb-2">contact@softlution.com</p>
+      <p class="text-lg mb-2">(+69) 45442323</p>
+      <p class="text-lg mb-2">(+69) 345 600</p>
+
+    </div>
+    <div class="contact-form md:w-1/2 bg-white text-black p-8 rounded-lg shadow-lg">
+      <form hx-post="/submit-form" hx-target="#form-response" hx-swap="outerHTML">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-bold mb-2">Name*</label>
+          <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="company" class="block text-sm font-bold mb-2">Company*</label>
+          <input type="text" id="company" name="company" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-bold mb-2">Phone*</label>
+          <input type="text" id="phone" name="phone" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-bold mb-2">Business Email*</label>
+          <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-bold mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox">
+            <span class="ml-2">I accept terms and conditions</span>
+          </label>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<div class="container mx-auto px-4 py-20 flex flex-col md:flex-row justify-between items-center"
+  <div class="contact-details md:w-1/2 mb-8 md:mb-0">
+    <h2 class="text-4xl font-bold mb-4">Work with Us</h2>
+  </div>
+  </div>
+  </div>
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center mt-16">
+    <div class="contact-form md:w-1/2 bg-white text-black p-8 rounded-lg shadow-lg">
+      <h2 class="text-4xl font-bold mb-4 text-green-500">Work with us</h2>
+      <form hx-post="/submit-form" hx-target="#form-response" hx-swap="outerHTML">
+        <div class="mb-4">
+          <label for="position" class="block text-sm font-bold mb-2">Position (Job Title to Apply for)*</label>
+          <input type="text" id="position" name="position" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="full-name" class="block text-sm font-bold mb-2">Full Name*</label>
+          <input type="text" id="full-name" name="full-name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="document-type" class="block text-sm font-bold mb-2">Document Type*</label>
+          <select id="document-type" name="document-type" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Select...</option>
+            <option value="id">ID</option>
+            <option value="passport">Passport</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="document-number" class="block text-sm font-bold mb-2">Document Number*</label>
+          <input type="text" id="document-number" name="document-number" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="phone-number" class="block text-sm font-bold mb-2">Cell Phone Number*</label>
+          <input type="text" id="phone-number" name="phone-number" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-bold mb-2">Email*</label>
+          <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="area" class="block text-sm font-bold mb-2">Area of Tuatara you would like to belong to*</label>
+          <select id="area" name="area" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Select...</option>
+            <option value="marketing">Marketing</option>
+            <option value="development">Development</option>
+            <option value="design">Design</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="internship" class="block text-sm font-bold mb-2">Do you want to do your professional internship at Tuatara?*</label>
+          <select id="internship" name="internship" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Select...</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="cv" class="block text-sm font-bold mb-2">Resume / CV* (format: PDF | DOC)</label>
+          <input type="file" id="cv" name="cv" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="additional-file" class="block text-sm font-bold mb-2">Additional File (format: PDF | DOC)</label>
+          <input type="file" id="additional-file" name="additional-file" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-bold mb-2">Message*</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="form-checkbox">
+            <span class="ml-2">I accept terms and conditions</span>
+          </label>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Apply</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<div id="form-response"></div>

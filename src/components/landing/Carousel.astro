@@ -1,0 +1,194 @@
+
+
+  <style>
+    /* Define the slide-up animation */
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Apply the animation to the text and button elements */
+    .animate-slide-up {
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .carousel-item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition-property: all;
+      object-fit: cover;
+    }
+
+    .carousel-item.active {
+      opacity: 1;
+      position: absolute;
+      transform: translateX(0);
+    }
+
+    .carousel-item-prev,
+    .carousel-item-next {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .carousel-item-prev {
+      transform: translateX(-100%);
+    }
+
+    .carousel-item-next {
+      transform: translateX(100%);
+    }
+  </style>
+
+  <div id="carouselExampleCaptions" class="relative overflow-hidden" data-twe-carousel-init data-twe-ride="carousel">
+    <!-- Carousel indicators -->
+    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0" data-twe-carousel-indicators>
+      <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="0" data-twe-carousel-active class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="1" class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none" aria-label="Slide 2"></button>
+      <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="2" class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Carousel items -->
+    <div class="relative w-full h-[500px]">
+      <!-- First item -->
+      <div class="carousel-item active" data-twe-carousel-item>
+        <img src="/public/images/img2.png" class="block w-full h-full object-cover" alt="First slide" />
+
+        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 p-4 text-white">
+          <div class="text-center text-container">
+            <h2 class="text-3xl font-bold mb-2">Cybersecurity</h2>
+            <p class="mb-4">Putting safety first, we pave the way for your business to surge ahead with confidence and resilience in a digital world.</p>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Request a Quote</button>
+          </div>
+        </div>
+      </div>
+      <!-- Second item -->
+      <div class="carousel-item" data-twe-carousel-item>
+        <img src="/public/images/crypto2.png" class="block w-full h-full object-cover" alt="Second slide" />
+        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 p-4 text-white">
+          <div class="text-center text-container">
+            <h2 class="text-3xl font-bold mb-2">Artificial Intelligence</h2>
+            <p class="mb-4">Empowering Your Business to Thrive with Cutting-Edge Artificial Intelligence Innovations.</p>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Request a Quote</button>
+          </div>
+        </div>
+      </div>
+      <!-- Third item -->
+      <div class="carousel-item" data-twe-carousel-item>
+        <img src="/public/images/ai1.png" class="block w-full h-full object-cover" alt="Third slide" />
+        <div class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 p-4 text-white">
+          <div class="text-center text-container">
+            <h2 class="text-3xl font-bold mb-2">Custom Decentralized Application Development
+            </h2>
+            <p class="mb-4">Building Custom Decentralized Applications to Drive Your Innovation Forward.</p>
+            <button class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Request a Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel controls - prev item -->
+    <button class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-0 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-10 hover:outline-none focus:text-white focus:no-underline focus:opacity-10 focus:outline-none motion-reduce:transition-none" type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="prev">
+      <span class="inline-block h-8 w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </span>
+      <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+    </button>
+    <!-- Carousel controls - next item -->
+    <button class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-0 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-10 hover:outline-none focus:text-white focus:no-underline focus:opacity-10 focus:outline-none motion-reduce:transition-none" type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="next">
+      <span class="inline-block h-8 w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </span>
+      <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+    </button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = document.querySelector('#carouselExampleCaptions');
+      if (!carousel) return;
+
+      const items = carousel.querySelectorAll('.carousel-item');
+      const indicators = carousel.querySelectorAll('[data-twe-carousel-indicators] button');
+      let currentIndex = 0;
+
+      const changeSlide = (newIndex: number) => {
+        items[currentIndex].classList.remove('active');
+        items[newIndex].classList.add('active');
+
+        // Remove and re-add the animation class to trigger the animation
+        const textContainer = items[newIndex].querySelector('.text-container') as HTMLElement;
+        if (textContainer) {
+          textContainer.classList.remove('animate-slide-up');
+          // Trigger reflow
+          textContainer.offsetWidth;
+          textContainer.classList.add('animate-slide-up');
+        }
+
+        if (newIndex > currentIndex) {
+          items[currentIndex].classList.add('carousel-item-prev');
+          items[newIndex].classList.add('carousel-item-next');
+          setTimeout(() => {
+            items[currentIndex].classList.remove('carousel-item-prev');
+            items[newIndex].classList.remove('carousel-item-next');
+            currentIndex = newIndex;
+          }, 600);
+        } else if (newIndex < currentIndex) {
+          items[currentIndex].classList.add('carousel-item-next');
+          items[newIndex].classList.add('carousel-item-prev');
+          setTimeout(() => {
+            items[currentIndex].classList.remove('carousel-item-next');
+            items[newIndex].classList.remove('carousel-item-prev');
+            currentIndex = newIndex;
+          }, 600);
+        }
+
+        indicators.forEach((indicator, index) => {
+          if (index === newIndex) {
+            indicator.classList.remove('opacity-50');
+            indicator.classList.add('opacity-100');
+          } else {
+            indicator.classList.remove('opacity-100');
+            indicator.classList.add('opacity-50');
+          }
+        });
+      };
+
+      const nextSlide = () => {
+        const nextIndex = (currentIndex + 1) % items.length;
+        changeSlide(nextIndex);
+      };
+
+      const prevSlide = () => {
+        const prevIndex = (currentIndex - 1 + items.length) % items.length;
+        changeSlide(prevIndex);
+      };
+
+      indicators.forEach((button, index) => {
+        button.addEventListener('click', () => changeSlide(index));
+      });
+
+      const nextButton = carousel.querySelector('[data-twe-slide="next"]');
+      const prevButton = carousel.querySelector('[data-twe-slide="prev"]');
+
+      if (nextButton) nextButton.addEventListener('click', nextSlide);
+      if (prevButton) prevButton.addEventListener('click', prevSlide);
+
+      setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    });
+  </script>

@@ -1,0 +1,113 @@
+---
+
+---
+<style>
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos personalizados para los botones */
+.button {
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #1e3a8a; /* Tailwind's blue-800 color */
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background-color: #1e3a8a; /* Tailwind's blue-800 color */
+  color: white;
+  border-color: #1e3a8a;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos personalizados para el título */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #1e3a8a; /* Tailwind's blue-800 color */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Estilos personalizados para el texto de las tarjetas */
+.card-title {
+  color: black;
+}
+</style>
+
+
+
+
+
+
+
+      <section class="py-8">
+        <div class="container mx-auto text-center">
+          <h2 class="section-title">"Discover our professional services that will help propel your business into the digital world."
+
+
+          </h2>
+        </div>
+      </section>
+      <section class="py-8">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+            <img src="images/bigdata1.jpg" alt="Big Data & Analítica" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+              <h3 class="card-title font-bold text-xl mb-2">Cybersecurity</h3>
+              <a href="#" class="button">See More</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+            <img src="images/multi-cloud.png" alt="Multi-Cloud" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+              <h3 class="card-title font-bold text-xl mb-2">Artificial Intelligence</h3>
+              <a href="#" class="button">See More</a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+            <img src="images/crypto.jpeg" alt="Desarrollo de Software" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+              <h3 class="card-title font-bold text-xl mb-2">Custom Decentralized Application Development</h3>
+              <a href="#" class="button">See More</a>
+            </div>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+            <img src="images/crypto.jpeg" alt="Desarrollo de Software" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+              <h3 class="card-title font-bold text-xl mb-2">Desarrollo de Software</h3>
+              <a href="#" class="button">See More</a>
+            </div>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+            <img src="images/crypto.jpeg" alt="Desarrollo de Software" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+              <h3 class="card-title font-bold text-xl mb-2">Desarrollo de Software</h3>
+              <a href="#" class="button">See more</a>
+            </div>
+          </div>
+
+          </div>
+
+          </div>
+        </div>
+      </section>
