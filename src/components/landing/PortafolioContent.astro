@@ -220,8 +220,8 @@ import 'daisyui/dist/full.css';
 
     <script>
       function filterCards() {
-        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-        const selectedCategory = document.getElementById('categorySelect').value;
+        const searchTerm = (document.getElementById('searchInput') as HTMLInputElement).value.toLowerCase();
+        const selectedCategory = (document.getElementById('categorySelect') as HTMLSelectElement).value;
         const cards = document.querySelectorAll('#cardsContainer .card');
 
         cards.forEach(card => {
@@ -232,16 +232,16 @@ import 'daisyui/dist/full.css';
             (title.includes(searchTerm) || searchTerm === '') &&
             (selectedCategory === '' || category === selectedCategory)
           ) {
-            card.style.display = 'block';
+            (card as HTMLElement).style.display = 'block';
           } else {
-            card.style.display = 'none';
+            (card as HTMLElement).style.display = 'none';
           }
         });
       }
 
       function clearFilters() {
-        document.getElementById('searchInput').value = '';
-        document.getElementById('categorySelect').value = '';
+        (document.getElementById('searchInput') as HTMLInputElement).value = '';
+        (document.getElementById('categorySelect') as HTMLSelectElement).value = '';
         filterCards();
       }
 

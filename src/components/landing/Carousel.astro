@@ -149,7 +149,7 @@ layout: "../layouts/Layout.astro"
     </button>
   </div>
 
-  <script>
+  <script type="module">
     document.addEventListener('DOMContentLoaded', function () {
       const carousel = document.querySelector('#carouselExampleCaptions');
       if (!carousel) return;
@@ -169,25 +169,33 @@ layout: "../layouts/Layout.astro"
         requestAnimationFrame(() => {
           currentItem.classList.add('slide');
           nextItem.classList.add('slide');
-          nextItem.style.transform = 'scale(1)';
-          nextItem.style.opacity = '1';
+          if (nextItem instanceof HTMLElement) {
+            nextItem.style.transform = 'scale(1)';
+            nextItem.style.opacity = '1';
+          }
 
           requestAnimationFrame(() => {
-            currentItem.style.opacity = '0';
-            currentItem.style.transform = 'scale(1.1)';
+            if (currentItem instanceof HTMLElement) {
+              currentItem.style.opacity = '0';
+              currentItem.style.transform = 'scale(1.1)';
+            }
           });
         });
 
         nextItem.addEventListener('transitionend', () => {
           currentItem.classList.remove('active', 'slide');
-          currentItem.style.transform = '';
-          currentItem.style.opacity = '';
+          if (currentItem instanceof HTMLElement) {
+            currentItem.style.transform = '';
+            currentItem.style.opacity = '';
+          }
           nextItem.classList.remove(direction, 'slide');
           nextItem.classList.add('active');
           const textContainer = nextItem.querySelector('.text-container');
-          textContainer.classList.remove('animate-slide-up');
-          void textContainer.offsetWidth; // trigger reflow
-          textContainer.classList.add('animate-slide-up');
+          if (textContainer instanceof HTMLElement) {
+            textContainer.classList.remove('animate-slide-up');
+            void textContainer.offsetWidth; // trigger reflow
+            textContainer.classList.add('animate-slide-up');
+          }
           currentIndex = newIndex;
         }, { once: true });
 

@@ -1,3 +1,8 @@
+---
+title: "Navbar with Hover Effect"
+layout: "../layouts/Layout.astro"
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,14 +179,14 @@
       let timeout;
       item.addEventListener('mouseenter', () => {
         const dropdown = item.querySelector('.group-hover\\:block');
-        if (dropdown) {
+        if (dropdown instanceof HTMLElement) {
           clearTimeout(timeout);
           dropdown.style.display = 'block';
         }
       });
       item.addEventListener('mouseleave', () => {
         const dropdown = item.querySelector('.group-hover\\:block');
-        if (dropdown) {
+        if (dropdown instanceof HTMLElement) {
           timeout = window.setTimeout(() => {
             dropdown.style.display = 'none';
           }, 200); // Add a delay before hiding the submenu
