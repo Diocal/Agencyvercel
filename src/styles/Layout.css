@@ -1,5 +1,5 @@
 body ,html{
-  background: #ffffff;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
   color: whitesmoke;
   margin: 0;
   padding: 0;

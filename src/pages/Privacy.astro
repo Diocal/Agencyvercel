@@ -1,0 +1,29 @@
+---
+import Privacycontent from '../components/landing/Privacycontent.astro';
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/landing/Menu.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Softlution</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Softlution</h1>
+      <!-- Otros contenidos del encabezado -->
+    </header>
+  <Layout title="Privacy Politics">
+    <main>
+      <!-- Otros contenidos principales -->
+      <Menu/>
+      <!-- Incluir la política de privacidad -->
+      <Privacycontent/>
+
+    </main>
+  </Layout>
+
+  </body>
+</html>

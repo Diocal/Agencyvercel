@@ -1,6 +1,3 @@
----
----
-
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
 </head>
@@ -14,7 +11,7 @@
     display: none;  /* Chrome, Safari, and Opera */
   }
   .contact-section {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background: linear-gradient(135deg, #152a7d, #aaaaaa, #ffffff);
     color: #fff;
     padding: 2rem 0;
     font-family: 'Montserrat', sans-serif;
@@ -42,6 +39,8 @@
     border: 1px solid #ccc;
     border-radius: 0.25rem;
     font-family: 'Montserrat', sans-serif;
+    background-color: #fff; /* Asegurar fondo blanco */
+    color: #000; /* Asegurar texto negro */
   }
   .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
     outline: none;
@@ -49,7 +48,7 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   .contact-form button {
-    background: #e83e8c;
+    background: #007bff;
     color: #fff;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -106,6 +105,47 @@
   .mt-8 {
     margin-top: 2rem;
   }
+  /* Estilos para el checkbox personalizado */
+  .custom-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  .custom-checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .custom-checkbox input:checked + .checkmark {
+    background-color: #007bff;
+  }
+  .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .custom-checkbox input:checked + .checkmark::after {
+    display: block;
+  }
+  .custom-checkbox .checkmark::after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
   @media (min-width: 768px) {
     .md\:w-1\/2 {
       width: 50%;
@@ -134,29 +174,28 @@
       <form hx-post="/submit-form" hx-target="#form-response" hx-swap="outerHTML">
         <div class="mb-4">
           <label for="name" class="block text-sm font-bold mb-2">Name*</label>
-          <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="text" id="name" name="name" class="bg-white w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div class="mb-4">
           <label for="company" class="block text-sm font-bold mb-2">Company*</label>
-          <input type="text" id="company" name="company" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="text" id="company" name="company" class="bg-white w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div class="mb-4">
           <label for="phone" class="block text-sm font-bold mb-2">Phone*</label>
-          <input type="text" id="phone" name="phone" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="text" id="phone" name="phone" class="bg-white w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div class="mb-4">
           <label for="email" class="block text-sm font-bold mb-2">Business Email*</label>
-          <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <input type="email" id="email" name="email" class="bg-white w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div class="mb-4">
           <label for="message" class="block text-sm font-bold mb-2">Message</label>
-          <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          <textarea id="message" name="message" rows="4" class="bg-white w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
         </div>
-        <div class="mb-4">
-          <label class="inline-flex items-center">
-            <input type="checkbox" class="form-checkbox">
-            <span class="ml-2">I accept terms and conditions</span>
-          </label>
+        <div class="mb-4 custom-checkbox">
+          <input type="checkbox" id="terms" name="terms">
+          <label for="terms" class="checkmark"></label>
+          <span>I accept terms and conditions</span>
         </div>
         <div class="text-center">
           <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Send</button>
@@ -231,14 +270,13 @@
           <label for="message" class="block text-sm font-bold mb-2">Message*</label>
           <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
         </div>
-        <div class="mb-4">
-          <label class="inline-flex items-center">
-            <input type="checkbox" class="form-checkbox">
-            <span class="ml-2">I accept terms and conditions</span>
-          </label>
+        <div class="mb-4 custom-checkbox">
+          <input type="checkbox" id="terms2" name="terms2">
+          <label for="terms2" class="checkmark"></label>
+          <span>I accept terms and conditions</span>
         </div>
         <div class="text-center">
-          <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Apply</button>
+          <button type="submit" class="bg-blue-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Apply</button>
         </div>
       </form>
     </div>

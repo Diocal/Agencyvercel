@@ -1,40 +1,74 @@
-<footer class="bg-black text-white py-10">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row md:justify-between items-center md:items-start">
-      <div class="mb-8 md:mb-0">
-        <img src="images/logo.png" alt="Logo" class="mb-4">
-      </div>
-      <div class="w-full md:w-auto flex flex-col items-center md:items-start mb-8 md:mb-0">
-        <h3 class="font-bold mb-2">Contact</h3>
-        <p class="text-sm mb-2">Miami | USA</p>
-        <p class="text-sm mb-2">contact@softlution.com</p>
-        <p class="text-sm mb-2">(+69) 9992108826<br>(+1) 9992108826</p>
-      </div>
-      <div class="w-full md:w-auto flex flex-col items-center md:items-start mb-8 md:mb-0">
-        <h3 class="font-bold mb-2">Map</h3>
-        <p class="text-sm mb-2">Home</p>
-        <p class="text-sm mb-2">About Us</p>
-        <p class="text-sm mb-2">Request a Quote</p>
-        <p class="text-sm mb-2">Portfolio</p>
-        <p class="text-sm mb-2">Contact Us</p>
-      </div>
-      <div class="w-full md:w-auto flex flex-col items-center md:items-start mb-8 md:mb-0">
-        <h3 class="font-bold mb-2">Legal</h3>
-        <p class="text-sm mb-2">Privacy</p>
-        <p class="text-sm mb-2">Quality Policy</p>
-        <p class="text-sm mb-2">Code of Ethics</p>
-      </div>
-    </div>
-    <div class="mt-10 text-center">
-      <p class="text-sm">Softlution | All rights reserved.</p>
-      <div class="flex justify-center space-x-4 mt-4">
-        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .bg-custom-blue {
+      background-color: #1E40AF; /* Custom blue color */
+    }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    .footer-logo {
+      height: 60px; /* Slightly smaller logo size */
+    }
+
+    .footer-section {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-text {
+      margin-bottom: 0.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-section {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Footer Section -->
+  <footer class="bg-custom-blue text-white py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:justify-between items-center md:items-start">
+        <div class="footer-section mb-4 md:mb-0">
+          <img src="images/logo.png" alt="Logo" class="footer-logo mb-2">
+        </div>
+        <div class="footer-section w-full md:w-auto flex flex-col items-center md:items-start mb-4 md:mb-0">
+          <h3 class="font-bold mb-1">Contact</h3>
+          <p class="footer-text text-sm">Miami | USA</p>
+          <p class="footer-text text-sm">contact@softlution.com</p>
+          <p class="footer-text text-sm">(+69) 9992108826<br>(+1) 9992108826</p>
+        </div>
+        <div class="footer-section w-full md:w-auto flex flex-col items-center md:items-start mb-4 md:mb-0">
+          <h3 class="font-bold mb-1">Map</h3>
+          <a href="./" class="footer-text text-sm">Home</a>
+          <a href="./About" class="footer-text text-sm">About Us</a>
+          <a href="./Quote" class="footer-text text-sm">Request a Quote</a>
+          <a href="./Portafolio" class="footer-text text-sm">Portfolio</a>
+
+        </div>
+        <div class="footer-section w-full md:w-auto flex flex-col items-center md:items-start mb-4 md:mb-0">
+          <h3 class="font-bold mb-1">Legal</h3>
+          <a href="./Privacy" class="footer-text text-sm">Privacy</a>
+          <a href="./Contact" class="footer-text text-sm">Contact Us</p>
+
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <p class="text-sm">Softlution | All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
